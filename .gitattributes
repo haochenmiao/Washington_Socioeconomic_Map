@@ -1,0 +1,2 @@
+*.json filter=lfs diff=lfs merge=lfs -text
+/Users/haochenmiao/Documents/Data_Sciecne_Projects/Washington_racial_equality_map-main/assets/Normalized_Low_Birth_Weight.geojson filter=lfs diff=lfs merge=lfs -text
