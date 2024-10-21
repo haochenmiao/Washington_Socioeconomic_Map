@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Washington Social and Economic Conditions Map</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,800" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="./css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg">
+        <div class="container-fluid" style="font-size: 25px; font-family: 'Source', sans-serif;">
+            <a class="navbar-brand" href="index.html">Washington Social and Economic Conditions Map</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end " id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="map.html">Map</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="data_info.html">Data</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about_me.html">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/CalvinUW/Washington_pollutant_map"><i
+                                class="fa-brands fa-square-github"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <h1 style="font-size: 40px; font-family: 'Source', sans-serif;">Data Information Page</h1>
+    <hr>
+    <h2 style="font-size: 30px; font-family: 'Source', sans-serif;">Sources:</h2>
+    <p style="font-size: 20px; font-family: 'Source', sans-serif;">All data used in this map was gathered from the
+        Washington Geospatial Open Data Portal. In total, six separate
+        datasets were gathered, with one key variable in the map being derived from each individual dataset. Shown
+        in the table below are the datasets, the used variables, and the sources of the datasets. </p>
+    <table id="data_table">
+        <tr>
+            <th>Dataset</th>
+            <th>Variable</th>
+            <th>Source</th>
+        </tr>
+        <tr>
+            <td>Low Birth Weight (Current Version)</td>
+            <td>properties_Percent_Singleton_Live_Births</td>
+            <td><a href="https://geo.wa.gov/datasets/WADOH::low-birth-weight-current-version/about">Washington Open
+                    Data Portal</a></td>
+        </tr>
+        <tr>
+            <td>People of Color (Current Version)</td>
+            <td>properties_Percent_People_of_Color</td>
+            <td><a href="https://geo.wa.gov/datasets/WADOH::people-of-color-current-version/about">Washington
+                    Open
+                    Data Portal</a></td>
+        </tr>
+        <tr>
+            <td>No High School Diploma (Current Version)</td>
+            <td>properties_Percent_Without_Diploma</td>
+            <td><a href="https://geo.wa.gov/datasets/WADOH::no-high-school-diploma-current-version/about">Washington
+                    Open
+                    Data Portal</a></td>
+        </tr>
+        <tr>
+            <td>Population Living in Poverty (Current Version)</td>
+            <td>properties_Percent_Living_in_Poverty</td>
+            <td><a href="https://geo.wa.gov/datasets/WADOH::population-living-in-poverty-current-version/about">Washington Open
+                    Data Portal</a></td>
+        </tr>
+        <tr>
+            <td>Unaffordable Housing (Current Version)</td>
+            <td>properties_Percentage</td>
+            <td><a href="https://geo.wa.gov/datasets/WADOH::unaffordable-housing-current-version/about">Washington
+                    Open
+                    Data Portal</a></td>
+        </tr>
+        <tr>
+            <td>Unemployed Population (Current Version)
+            </td>
+            <td>properties_Percent_Unemployed</td>
+            <td><a
+                    href="https://geo.wa.gov/datasets/WADOH::toxic-releases-from-facilities-rsei-model-current-version/about">Washington
+                    Open
+                    Data Portal</a></td>
+        </tr>
+        <tr>
+            <td>Coordinates of all the cities in Washington State
+            </td>
+            <td>Browse Cities</td>
+            <td><a
+                    href="https://www.mapsofworld.com/usa/states/washington/lat-long.html">Maps of World
+            </a></td>
+        </tr>
+        
+        
+        
+    </table>
+    <br>
+    <hr>
+    <h2 style="font-size: 30px; font-family: 'Source', sans-serif;">Variable Description:</h2>
+    <h4 style="font-size: 25px; font-family: 'Source', sans-serif;"> properties_Percent_Singleton_Live_Births</h4>
+    <p style="font-size: 20px; font-family: 'Source', sans-serif;">Number of live born singleton (one baby) infants born at term (at or above 37 completed weeks of gestation) with a birth weight of less than 2,500 grams (about 5.5 lbs.). <a href="https://fortress.wa.gov/doh/wtn/WTNPortal#!q0=372" style="color:black">(More
+            information)</a>
+        <br>
+        <br>
+    </p>
+
+    <h4 style="font-size: 25px; font-family: 'Source', sans-serif;"> properties_Percent_People_of_Color</h4>
+    <p style="font-size: 20px; font-family: 'Source', sans-serif;">A sum of all race/ethnicity categories EXCEPT White/Non-Hispanic, this includes: Black, American Indian/Alaskan Native, Asian, Native Hawaiian-Other Pacific Islander, Two or more races and the ethnicity grouping of "Spanish/Hispanic/Latino".
+        <a href="https://fortress.wa.gov/doh/wtn/WTNPortal#!q0=4707" style="color:black">(More
+            information)</a>
+        <br>
+        <br>
+    </p>
+
+    <h4 style="font-size: 25px; font-family: 'Source', sans-serif;"> properties_Percent_Without_Diploma</h4>
+    <p style="font-size: 20px; font-family: 'Source', sans-serif;">the percentage of people who have not received a high school diploma or GED by the age of 25. <a href="https://fortress.wa.gov/doh/wtn/WTNPortal#!q0=1383"
+            style="color:black">(More
+            information)</a>
+        <br>
+        <br>
+    </p>
+
+    <h4 style="font-size: 25px; font-family: 'Source', sans-serif;"> properties_Percent_Living_in_Poverty</h4>
+    <p style="font-size: 20px; font-family: 'Source', sans-serif;">poverty from the ACS 5-year roll-up (2015- 2019), measured people living under 185% of the federal poverty level from Table S1701 columns for Population used to estimate poverty (HC01_EST_VC01), the number of people living below 185% (HC01_EST_VC55) and the associated margin of error (HC01_MOE_VC55). <a
+            href="https://fortress.wa.gov/doh/wtn/WTNPortal#!q0=3625" style="color:black">(More
+            information)</a>
+        <br>
+        <br>
+    </p>
+
+    <h4 style="font-size: 25px; font-family: 'Source', sans-serif;"> properties_Percentage</h4>
+    <p style="font-size: 20px; font-family: 'Source', sans-serif;">the percent householders spend on housing costs for 2015-2019 <a
+            href="https://fortress.wa.gov/doh/wtn/WTNPortal#!q0=4742" style="color:black">(More
+            information)</a>
+        <br>
+        <br>
+    </p>
+
+    <h4 style="font-size: 25px; font-family: 'Source', sans-serif;"> properties_Percent_Unemployed</h4>
+    <p style="font-size: 20px; font-family: 'Source', sans-serif;">the population of people 16 years and older that are in the labor force and registered as unemployed. This measure was derived from the following ACS Table "Employment Status" (DP03) columns HC02_VC05, HC01_VC07 for 2015 - 2019
+        <a href="https://fortress.wa.gov/doh/wtn/WTNPortal#!q0=627" style="color:black">(More
+            information)</a>
+        <br>
+        <br>
+    </p>
+    
+    <h4 style="font-size: 25px; font-family: 'Source', sans-serif;"> Browse Cities</h4>
+    <p style="font-size: 20px; font-family: 'Source', sans-serif;">A list of all cities in Washington state with coordinates
+        allowing the users to 'fly to' or focus screens on selected cities
+        <a href="https://www.mapsofworld.com/usa/states/washington/lat-long.html" style="color:black">(More
+            information)</a>
+        <br>
+        <br>
+    </p>
+
+
+    <hr>
+
+    <h2 style="font-size: 30px; font-family: 'Source', sans-serif;">Treatment:</h2>
+    <p style="font-size: 20px; font-family: 'Source', sans-serif;">In order to allow for the data from each dataset to
+        be readily comparable across different scales, each variable
+        used in the map was normalized using min-max normalization. The normalized values of each variable were then
+        used to get the height and color of census tract polygons. In the map, when a census tract is clicked upon the
+        actual pollutant value is shown after the census tract and is then followed by the census tract's normalized
+        value.
+        <br>
+        <br>
+        Aside from min-max normalization, the geometry of the data was clipped using a <a
+            href="https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html"
+            style="color: black;">
+            cartographic boundary map<a> from the United States census bureau. Clipping was performed on the data so as
+                to limit census tract extents to only land area, thereby improving geographic legibility.</p>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
