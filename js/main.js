@@ -31,120 +31,78 @@ if (page == 'map-page') {
             }
         }
 
-        // Fetch and load Low Birth Weight GeoJSON
-        fetch('./assets/simplified_Normalized_Low_Birth_Weight.json')
-            .then(response => {
-                console.log('Response for Low Birth Weight:', response);
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.json();
+        map.addSource('low_birth_data', {
+            type: 'geojson',
+            'generateId': true, // crucially important for click color change to work
+            data: './assets/simplified_Normalized_Low_Birth_Weight.json'
+        })
+            .on('data', function () {
+                console.log("Low Birth Weight data loaded successfully");
             })
-            .then(data => {
-                console.log('Loaded Low Birth Weight GeoJSON:', data);
-                map.addSource('low_birth_data', {
-                    type: 'geojson',
-                    'generateId': true,
-                    data: data
-                });
-            })
-            .catch(error => console.error('Error fetching Low Birth Weight GeoJSON:', error));
+            .on('error', function (error) {
+                console.error("Error loading Low Birth Weight data: ", error);
+            });
 
-        // Fetch and load People of Color GeoJSON
-        fetch('./assets/simplified_Normalized_People_of_Color_Washington.json')
-            .then(response => {
-                console.log('Response for People of Color:', response);
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.json();
+        map.addSource('people_color_data', {
+            type: 'geojson',
+            'generateId': true, // crucially important for click color change to work
+            data: './assets/simplified_Normalized_People_of_Color_Washington.json'
+        })
+            .on('data', function () {
+                console.log("Low Birth Weight data loaded successfully");
             })
-            .then(data => {
-                console.log('Loaded People of Color GeoJSON:', data);
-                map.addSource('people_color_data', {
-                    type: 'geojson',
-                    'generateId': true,
-                    data: data
-                });
-            })
-            .catch(error => console.error('Error fetching People of Color GeoJSON:', error));
+            .on('error', function (error) {
+                console.error("Error loading Low Birth Weight data: ", error);
+            });
 
-        // Fetch and load No High School Diploma GeoJSON
-        fetch('./assets/simplified_Normalized_No_High_School_Diploma_Washington.json')
-            .then(response => {
-                console.log('Response for No High School Diploma:', response);
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.json();
+        map.addSource('population_noHighSchool_data', {
+            type: 'geojson',
+            'generateId': true, // crucially important for click color change to work
+            data: './assets/simplified_Normalized_No_High_School_Diploma_Washington.json'
+        })
+            .on('data', function () {
+                console.log("Low Birth Weight data loaded successfully");
             })
-            .then(data => {
-                console.log('Loaded No High School Diploma GeoJSON:', data);
-                map.addSource('population_noHighSchool_data', {
-                    type: 'geojson',
-                    'generateId': true,
-                    data: data
-                });
-            })
-            .catch(error => console.error('Error fetching No High School Diploma GeoJSON:', error));
+            .on('error', function (error) {
+                console.error("Error loading Low Birth Weight data: ", error);
+            });
 
-        // Fetch and load Poverty GeoJSON
-        fetch('./assets/simplified_Normalized_Poverty_Population_Washington.json')
-            .then(response => {
-                console.log('Response for Poverty:', response);
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.json();
+        map.addSource('poverty_data', {
+            type: 'geojson',
+            'generateId': true, // crucially important for click color change to work
+            data: './assets/simplified_Normalized_Poverty_Population_Washington.json'
+        })
+            .on('data', function () {
+                console.log("Low Birth Weight data loaded successfully");
             })
-            .then(data => {
-                console.log('Loaded Poverty GeoJSON:', data);
-                map.addSource('poverty_data', {
-                    type: 'geojson',
-                    'generateId': true,
-                    data: data
-                });
-            })
-            .catch(error => console.error('Error fetching Poverty GeoJSON:', error));
+            .on('error', function (error) {
+                console.error("Error loading Low Birth Weight data: ", error);
+            });
 
-        // Fetch and load Unaffordable Housing GeoJSON
-        fetch('./assets/simplified_Normalized_Unaffordable_Housing.json')
-            .then(response => {
-                console.log('Response for Unaffordable Housing:', response);
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.json();
+        map.addSource('unaffordable_data', {
+            type: 'geojson',
+            'generateId': true, // crucially important for click color change to work
+            data: './assets/simplified_Normalized_Unaffordable_Housing.json'
+        })
+            .on('data', function () {
+                console.log("Low Birth Weight data loaded successfully");
             })
-            .then(data => {
-                console.log('Loaded Unaffordable Housing GeoJSON:', data);
-                map.addSource('unaffordable_data', {
-                    type: 'geojson',
-                    'generateId': true,
-                    data: data
-                });
-            })
-            .catch(error => console.error('Error fetching Unaffordable Housing GeoJSON:', error));
+            .on('error', function (error) {
+                console.error("Error loading Low Birth Weight data: ", error);
+            });
 
-        // Fetch and load Unemployed GeoJSON
-        fetch('./assets/simplified_Normalized_Unemployed_Population.json')
-            .then(response => {
-                console.log('Response for Unemployed:', response);
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.json();
+        map.addSource('unemployed_data', {
+            type: 'geojson',
+            'generateId': true, // crucially important for click color change to work
+            data: './assets/simplified_Normalized_Unemployed_Population.json'
+        })
+            .on('data', function () {
+                console.log("Low Birth Weight data loaded successfully");
             })
-            .then(data => {
-                console.log('Loaded Unemployed GeoJSON:', data);
-                map.addSource('unemployed_data', {
-                    type: 'geojson',
-                    'generateId': true,
-                    data: data
-                });
-            })
-            .catch(error => console.error('Error fetching Unemployed GeoJSON:', error));
-            
+            .on('error', function (error) {
+                console.error("Error loading Low Birth Weight data: ", error);
+            });
+
         map.addLayer({
                 'id': 'low_birth-extrusion',
                 'type': 'fill-extrusion',
