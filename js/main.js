@@ -34,37 +34,37 @@ if (page == 'map-page') {
         map.addSource('low_birth_data', {
             type: 'geojson',
             'generateId': true, // crucially important for click color change to work
-            data: './assets/simplified_Normalized_Low_Birth_Weight.geojson'
+            data: './assets/simplified_Normalized_Low_Birth_Weight.json'
         });
 
         map.addSource('people_color_data', {
             type: 'geojson',
             'generateId': true, // crucially important for click color change to work
-            data: './assets/simplified_Normalized_People_of_Color_Washington.geojson'
+            data: './assets/simplified_Normalized_People_of_Color_Washington.json'
         });
 
         map.addSource('population_noHighSchool_data', {
             type: 'geojson',
             'generateId': true, // crucially important for click color change to work
-            data: './assets/simplified_Normalized_No_High_School_Diploma_Washington.geojson'
+            data: './assets/simplified_Normalized_No_High_School_Diploma_Washington.json'
         });
 
         map.addSource('poverty_data', {
             type: 'geojson',
             'generateId': true, // crucially important for click color change to work
-            data: './assets/simplified_Normalized_Poverty_Population_Washington.geojson'
+            data: './assets/simplified_Normalized_Poverty_Population_Washington.json'
         });
 
         map.addSource('unaffordable_data', {
             type: 'geojson',
             'generateId': true, // crucially important for click color change to work
-            data: './assets/simplified_Normalized_Unaffordable_Housing.geojson'
+            data: './assets/simplified_Normalized_Unaffordable_Housing.json'
         });
 
         map.addSource('unemployed_data', {
             type: 'geojson',
             'generateId': true, // crucially important for click color change to work
-            data: './assets/simplified_Normalized_Unemployed_Population.geojson'
+            data: './assets/simplified_Normalized_Unemployed_Population.json'
         });
 
         map.addLayer({
