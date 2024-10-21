@@ -1,4 +1,4 @@
-# Washington Pollutant Map
+# Washington Social and Economic Conditions Map
 
 ## Team Member:
 - Haochen Miao
