@@ -34,37 +34,37 @@ if (page == 'map-page') {
         map.addSource('low_birth_data', {
             type: 'geojson',
             'generateId': true, // crucially important for click color change to work
-            data: './assets/Normalized_Low_Birth_Weight.json'
+            data: './assets/simplified_Normalized_Low_Birth_Weight.geojson'
         });
 
         map.addSource('people_color_data', {
             type: 'geojson',
             'generateId': true, // crucially important for click color change to work
-            data: './assets/Normalized_People_of_Color_Washington.json'
+            data: './assets/simplified_Normalized_People_of_Color_Washington.geojson'
         });
 
         map.addSource('population_noHighSchool_data', {
             type: 'geojson',
             'generateId': true, // crucially important for click color change to work
-            data: './assets/Normalized_No_High_School_Diploma_Washington.json'
+            data: './assets/simplified_Normalized_No_High_School_Diploma_Washington.geojson'
         });
 
         map.addSource('poverty_data', {
             type: 'geojson',
             'generateId': true, // crucially important for click color change to work
-            data: './assets/Normalized_Poverty_Population_Washington.json'
+            data: './assets/simplified_Normalized_Poverty_Population_Washington.geojson'
         });
 
         map.addSource('unaffordable_data', {
             type: 'geojson',
             'generateId': true, // crucially important for click color change to work
-            data: './assets/Normalized_Unaffordable_Housing.json'
+            data: './assets/simplified_Normalized_Unaffordable_Housing.geojson'
         });
 
         map.addSource('unemployed_data', {
             type: 'geojson',
             'generateId': true, // crucially important for click color change to work
-            data: './assets/Normalized_Unemployed_Population.json'
+            data: './assets/simplified_Normalized_Unemployed_Population.geojson'
         });
 
         map.addLayer({
