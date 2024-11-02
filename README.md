@@ -13,27 +13,27 @@ Although the map is the centerpiece of this project, it is only one component of
 
 ## Screenshots
 
-### Map 1 - Lead in Housing Units
+### Map 1 - Low Birth Weight
 
 ![](img/map1-screenshot.png)
 
-### Map 2 - Diesel and NoX Emissions
+### Map 2 - People of Color
 
 ![](img/map2-screenshot.png)
 
-### Map 3 - Ozone Concentrations
+### Map 3 - No High School Diploma
 
 ![](img/map3-screenshot.png)
 
-### Map 4 - PM 2.5 Air Pollution Count
+### Map 4 - Population Living in Poverty
 
 ![](img/map4-screenshot.png)
 
-### Map 5 - Proximity to Heavy Traffic
+### Map 5 - Unaffordable Housing
 
 ![](img/map5-screenshot.png)
 
-### Map 6 - Hazardous Chemical Releases
+### Map 6 - Unemployed Population
 
 ![](img/map6-screenshot.png)
 
