@@ -3,7 +3,7 @@ let page = document.body.id;
 
 if (page == 'map-page') {
     mapboxgl.accessToken =
-        'pk.eyJ1IjoiaGFvY2gwNDIzIiwiYSI6ImNtMmk1MGhzeDBpajAybXB5d3ZrMjJxa2oifQ.4aD8xH6BjwIb-HzlRNaSbQ';
+        'pk.eyJ1IjoiaGFvY2gwNDIzIiwiYSI6ImNtNHBibDJsazB4bHYya29yZnVhYmRicGoifQ.HzUzkEhGJf-t2lhHTonusg';
     const map = new mapboxgl.Map({
         style: 'mapbox://styles/haoch0423/cleesckzn000501nw8wjmfeza',
         center: [-120.83628494223058, 47.63748628060085], // centered on seattle, may need to be changed
