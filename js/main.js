@@ -2,10 +2,8 @@
 let page = document.body.id;
 
 if (page == 'map-page') {
-    mapboxgl.accessToken = window.MAPBOX_TOKEN;
-    if (!mapboxgl.accessToken) {
-        console.error('Mapbox token missing — copy js/config.example.js to js/config.js and paste your pk.* token');
-    }
+    mapboxgl.accessToken =
+        'pk.eyJ1IjoiaGFvY2gwNDIzIiwiYSI6ImNtd3Fjc2dnZjA5ZzQyeW9nbTNqcmY2YnIifQ.8Nn-zymqWpEDdSZr3yMXDg';
     const map = new mapboxgl.Map({
         style: 'mapbox://styles/haoch0423/cleesckzn000501nw8wjmfeza',
         center: [-120.83628494223058, 47.63748628060085], // centered on seattle, may need to be changed
