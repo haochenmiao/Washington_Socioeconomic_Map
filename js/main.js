@@ -2,8 +2,10 @@
 let page = document.body.id;
 
 if (page == 'map-page') {
-    mapboxgl.accessToken =
-        'pk.eyJ1IjoiaGFvY2gwNDIzIiwiYSI6ImNtNHBibDJsazB4bHYya29yZnVhYmRicGoifQ.HzUzkEhGJf-t2lhHTonusg';
+    mapboxgl.accessToken = window.MAPBOX_TOKEN;
+    if (!mapboxgl.accessToken) {
+        console.error('Mapbox token missing — copy js/config.example.js to js/config.js and paste your pk.* token');
+    }
     const map = new mapboxgl.Map({
         style: 'mapbox://styles/haoch0423/cleesckzn000501nw8wjmfeza',
         center: [-120.83628494223058, 47.63748628060085], // centered on seattle, may need to be changed
@@ -790,3 +792,45 @@ function filterFunction() {
         }
     }
 }
+
+// --- Parent-frame remote control -------------------------------------------
+// Lets another page embed map.html in an iframe and drive its indicator menu
+// and city search via postMessage. Harmless when loaded standalone — the
+// listener never fires because no one sends messages.
+//
+//   parent.postMessage({ action: 'openSidebar' }, '*');
+//   parent.postMessage({ action: 'setIndicator', layerId: 'people_color-extrusion' }, '*');
+//   parent.postMessage({ action: 'flyToCity', city: 'Seattle' }, '*');
+window.addEventListener('message', function (e) {
+  var d = e.data;
+  if (!d || typeof d !== 'object' || !d.action) return;
+  try {
+    switch (d.action) {
+      case 'openSidebar':
+        if (typeof openNav === 'function') openNav();
+        break;
+      case 'setIndicator': {
+        var el = d.layerId && document.getElementById(d.layerId);
+        if (el && typeof el.click === 'function') el.click();
+        break;
+      }
+      case 'flyToCity': {
+        var target = (d.city || '').toString().toLowerCase();
+        if (!target) break;
+        var opts = document.querySelectorAll('#myDropdown option');
+        // Prefer exact (case-insensitive) id match; fall back to prefix.
+        var exact = null, prefix = null;
+        for (var i = 0; i < opts.length; i++) {
+          var id = (opts[i].id || '').toLowerCase();
+          if (id === target) { exact = opts[i]; break; }
+          if (!prefix && id.indexOf(target) === 0) prefix = opts[i];
+        }
+        var pick = exact || prefix;
+        if (pick && typeof pick.onclick === 'function') {
+          pick.onclick({ target: pick });
+        }
+        break;
+      }
+    }
+  } catch (err) { /* keep the listener alive */ }
+});

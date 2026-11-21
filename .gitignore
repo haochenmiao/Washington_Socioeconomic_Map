@@ -1,0 +1,4 @@
+
+# Secrets — populated from .env.example / config.example.js
+.env
+js/config.js
